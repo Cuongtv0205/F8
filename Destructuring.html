@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // var array = ['JS', 'PHP', 'Ruby']
+    // // var [a,b,c] = array; // 3 phần tử trong mảng
+    // // console.log(a,b,c) // 3 phần tử trong mảng//
+    // var [a, ...rest] = array
+    // console.log(a); // lấy ra tên JS//
+    // console.log(rest); // Lấy ra mảng PHP và Ruby
+    //Object//
+    // var course = {
+    //     name: 'Javascript',
+    //     price:1000,
+    //     image: 'image-address',
+    // };
+    // // var {name,price} = course; // `{}` lấy ra key trong obj  name hoặc price//
+    // // console.log(name,price)
+    // var {name,...rest} = course;
+    // console.log(name);
+    // console.log(rest);
+    // object con của object//
+    var course = {
+        name: 'PHP',
+        price: 1000,
+        image: 'image-address',
+        children: {
+            name:'ReactJS'
+        }
+    };
+    var {name: parentName,children:{name}} = course;
+    console.log(parentName) // ParentName: là cha tức là 'PHP'
+    console.log(name) // name là con tức là ReactJS
+</script>
+</body>
+</html>

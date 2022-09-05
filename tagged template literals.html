@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function highlight(...rest){ // '...': tham số gồm 'Học lập trình'. 'tại', '!'
+    console.log(rest);
+  }
+  var  brand = 'F8'; //Tham số tiếp là ' brand' và 'course'
+  var course = 'Javascript';
+  highlight`Học lập trình ${course} tại ${brand}!`
+// Áp dụng lấy các phan tử trong mảng//
+  function highlight([first,...strings], ...values){
+    // first(đối số thứ nhất):lấy chữ 'Học lập trình'
+    // ...strings mảng còn lại là 'tại' và '!'
+    // values : là 'javascript và 'f8'
+    console.log('first: ',first);
+    console.log('strings: ', strings);
+    console.log('values: ', values)
+  }
+  var  brand = 'F8';
+  var course = 'Javascript';
+  highlight`Học lập trình ${course} tại ${brand}!`
+
+</script>
+</body>
+</html>
