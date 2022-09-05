@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // cách viết thông thường//
+  const logger = function(log){
+      console.log(log)
+  }
+  logger('message...');
+  // arrowfunction//
+    const logger1 = (log1) => {
+      console.log(log1);
+    }
+    logger1('mess...');
+    // hoặc
+    const sum = (a,b) => {
+      return a+ b;
+    }
+    console.log(sum(2,2))
+    //
+    const summ = (a,b) => a+b;
+    console.log(summ(2,2)) // trừ khối ngoặc `{}`
+    // Object//
+    const summm = (a,b) => ({ a:a,b:b})
+    console.log(summm(2,2))
+    // Object//
+    const obj = {
+        name: 'Javascript basic!',
+        getName: function (){ // không có sử dụng được arrowfunction//
+            return this.name
+        }
+    };
+    console.log(obj.getName());
+</script>
+</body>
+</html>
